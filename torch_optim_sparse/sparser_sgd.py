@@ -62,5 +62,7 @@ class SparserSGD(SGD):
                         mom_values = grad_values.add(mom_values, alpha=momentum)
 
                     p.data.add_(make_sparse(mom_values), alpha=-lr)
+                else:
+                    p.add_(grad, alpha=-lr)
 
         return loss

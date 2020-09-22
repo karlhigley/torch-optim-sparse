@@ -58,8 +58,10 @@ class SparserSGDW(SGD):
                         mom_values = grad_values.add(mom_values, alpha=momentum)
 
                     p.data.add_(make_sparse(mom_values), alpha=-lr)
+                else:
+                    p.add_(grad, alpha=-lr)
 
                 if weight_decay != 0:
                     p.data.add_(p.data[grad_inds].sparse_mask(grad), alpha=-lr*weight_decay)
-
+   
         return loss
