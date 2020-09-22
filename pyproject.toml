@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "torch-optim-sparse"
+version = "0.1.0"
+description = "Truly sparse optimizers for PyTorch"
+authors = ["Karl Higley <kmhigley@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+torch = "^1.6.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pylint = "^2.6.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
