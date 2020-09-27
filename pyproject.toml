@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "torch-optim-sparse"
-version = "0.1.1"
+version = "0.1.2"
 description = "Truly sparse optimizers for PyTorch"
 authors = ["Karl Higley <kmhigley@gmail.com>"]
 
