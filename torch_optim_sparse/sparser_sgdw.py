@@ -62,6 +62,6 @@ class SparserSGDW(SGD):
                     p.add_(grad, alpha=-lr)
 
                 if weight_decay != 0:
-                    p.data.add_(p.data[grad_inds].sparse_mask(grad), alpha=-lr*weight_decay)
+                    p.add_(p.sparse_mask(grad), alpha=-lr*weight_decay)
    
         return loss
