@@ -39,7 +39,7 @@ class SparserSGD(SGD):
                     constructor = grad.new
                     if grad_inds.dim() == 0 or values.dim() == 0:
                         return constructor().resize_as_(grad)
-                    return constructor(grad_inds, values, size)
+                    return constructor(grad_inds, values.reshape(grad_values.shape), size)
 
                 if weight_decay != 0:
                     param_values = p.data[grad_inds].squeeze()

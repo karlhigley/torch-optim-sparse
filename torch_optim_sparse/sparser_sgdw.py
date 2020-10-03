@@ -39,7 +39,7 @@ class SparserSGDW(SGD):
                     constructor = grad.new
                     if grad_inds.dim() == 0 or values.dim() == 0:
                         return constructor().resize_as_(grad)
-                    return constructor(grad_inds, values, size)
+                    return constructor(grad_inds, values.reshape(grad_values.shape), size)
 
                 if momentum != 0:
                     param_state = self.state[p]

@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "torch-optim-sparse"
-version = "0.1.2"
-description = "Truly sparse optimizers for PyTorch"
+version = "0.1.3"
+description = "PyTorch optimizers with sparse momentum and weight decay"
 authors = ["Karl Higley <kmhigley@gmail.com>"]
 
 [tool.poetry.dependencies]
